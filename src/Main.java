@@ -21,12 +21,12 @@ public class Main {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(languagesParagraphXpath)));
         List<WebElement> languagesNamesList = driver.findElements(By.xpath("//*[@id=\"page1\"]/div[2]/div[5]/p"));
 
+        driver.close();
+
         for (WebElement languageElement : languagesNamesList) {
             String languageName = languageElement.getText();
             System.out.println(languageName);
         }
-
-        driver.close();
     }
 
 }
