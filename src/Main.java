@@ -29,14 +29,14 @@ public class Main {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(languagesParagraphXpath)));
         List<WebElement> languagesNamesList = driver.findElements(By.xpath(languagesXpath));
 
-        // Close the browser window
-        driver.close();
-
         // Print the languages
         for (WebElement languageElement : languagesNamesList) {
             String languageName = languageElement.getText();
             System.out.println(languageName);
         }
+        
+        // Close the browser window
+        driver.close();
 
     }
 
